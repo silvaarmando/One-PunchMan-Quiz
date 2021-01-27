@@ -1,15 +1,17 @@
 import styled from 'styled-components';
+import Head from 'next/head'
+
 import db from '../db.json';
 import Widget from '../src/components/Widget';
+import QuizLogo from '../src/components/QuizLogo';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
-import Head from 'next/head'
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
+//const Title = styled.h1`
+//  font-size: 50px;
+//  color: ${({ theme }) => theme.colors.primary};
+//`
 
 const BackgroundImage = styled.div`
   background-image: url(${db.bg});
@@ -34,20 +36,9 @@ export default function Home() {
     <QuizBackground backgroundImage={db.bg}>
       <Head>
         <title>One-Punch Man Quiz</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta charSet="UTF-8"/>
-        <meta name="description" content={description} />
-
-        <meta name="linkedin:card" content="summary" key="lkdcard" />
-        <meta name="linkedin:creator" content={linkedinHandle} key="lkdhandle" />
-
-        <meta property="og:url" content={currentURL} key="ogurl" />
-        <meta property="og:image" content={previewImage} key="ogimage" />
-        <meta property="og:site_name" content={siteName} key="ogsitename" />
-        <meta property="og:title" content={pageTitle} key="ogtitle" />
-        <meta property="og:description" content={description} key="ogdesc" />
       </Head>
       <QuizContainer>
+        <QuizLogo />
         <Widget>
           <Widget.Header>
               <h1>ONE-PUNCH MAN</h1>
