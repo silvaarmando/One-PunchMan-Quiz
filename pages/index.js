@@ -4,6 +4,7 @@ import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
+import Head from 'next/head'
 
 const Title = styled.h1`
   font-size: 50px;
@@ -29,8 +30,23 @@ export const QuizContainer = styled.div`
 `;
 
 export default function Home() {                                                  
-  return (
+  return ( 
     <QuizBackground backgroundImage={db.bg}>
+    <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta charSet="UTF-8"/>
+        <meta name="description" content={description} />
+
+        <meta name="linkedin:card" content="summary" key="lkdcard" />
+        <meta name="linkedin:creator" content={linkedinHandle} key="lkdhandle" />
+
+        <meta property="og:url" content={currentURL} key="ogurl" />
+        <meta property="og:image" content={previewImage} key="ogimage" />
+        <meta property="og:site_name" content={siteName} key="ogsitename" />
+        <meta property="og:title" content={pageTitle} key="ogtitle" />
+        <meta property="og:description" content={description} key="ogdesc" />
+
+      </Head>
       <QuizContainer>
         <Widget>
           <Widget.Header>
