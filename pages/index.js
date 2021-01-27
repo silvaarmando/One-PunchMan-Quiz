@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 import db from '../db.json';
+import Widget from '../src/components/Widget';
+import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
+import QuizBackground from '../src/components/QuizBackground';
 
 const Title = styled.h1`
   font-size: 50px;
@@ -26,10 +30,26 @@ export const QuizContainer = styled.div`
 
 export default function Home() {                                                  
   return (
-    <BackgroundImage>
+    <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
-        asasasasas
+        <Widget>
+          <Widget.Header>
+              <h1>ONE-PUNCH MAN</h1>
+          </Widget.Header>
+          <Widget.Content>
+            <p>Participe desse quiz para saber o quanto você sabe sobre os hérois.</p>
+          </Widget.Content>
+        </Widget>
+        <Widget>
+          <Widget.Content>
+            <h1>Quizes da Galera</h1>
+
+            <p>Dê uma olhada nos quizes de outros herois e seja um héroi por diversão....</p>
+          </Widget.Content>
+        </Widget>
+        <Footer />
       </QuizContainer>
-    </BackgroundImage>
+      <GitHubCorner projectUrl="https://github.com/omariosouto"/>
+    </QuizBackground>
   )
 }
