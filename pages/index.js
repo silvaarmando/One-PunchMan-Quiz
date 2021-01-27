@@ -32,7 +32,8 @@ export const QuizContainer = styled.div`
 export default function Home() {                                                  
   return ( 
     <QuizBackground backgroundImage={db.bg}>
-    <Head>
+      <Head>
+        <title>One-Punch Man Quiz</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta charSet="UTF-8"/>
         <meta name="description" content={description} />
@@ -45,7 +46,6 @@ export default function Home() {
         <meta property="og:site_name" content={siteName} key="ogsitename" />
         <meta property="og:title" content={pageTitle} key="ogtitle" />
         <meta property="og:description" content={description} key="ogdesc" />
-
       </Head>
       <QuizContainer>
         <Widget>
