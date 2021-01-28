@@ -1,5 +1,5 @@
 <h1 align="center"> 
-  <a href="https://one-punch-man-quiz.franciscoarmando63.vercel.app/">
+  <a href="https://one-punch-man-quiz.franciscoarmando63.vercel.app/" targer="_blank">
     <img width="320" height="350" src="logoOnePunch.png"/>
   </h1>
 </center>
