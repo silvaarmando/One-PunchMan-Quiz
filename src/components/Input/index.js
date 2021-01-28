@@ -19,7 +19,7 @@ export default function Input({ onChange, placeholder, ...props }) {
   return (
     <div>
       <InputBase
-        name="Nome do Usuário"
+        name="nomeDoUsuário"
         placeholder={placeholder}
         onChange={onChange}
         // eslint-disable-next-line react/jsx-props-no-spreading
