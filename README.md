@@ -1,6 +1,6 @@
 <h1 align="center"> 
   <a href="https://one-punch-man-quiz.franciscoarmando63.vercel.app/">
-    <img src="logoOnePunch.png"/>
+    <img width="320" height="350" src="logoOnePunch.png"/>
   </h1>
 </center>
 <h2 align="center"> Aplicação Criada na Imersão React com NextJS e Styled Components da Alura.</h2>
