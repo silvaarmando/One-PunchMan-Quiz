@@ -3,7 +3,7 @@
     <img width="320" height="350" src="logoOnePunch.png"/>
   </h1>
 </center>
-<h2 align="center"> Aplicação Criada na Imersão React com NextJS e Styled Components da Alura.</h2>
+<h2 align="center"> Aplicação de Quiz Criada na Imersão React com NextJS e Styled Components da Alura.</h2>
 
 - [x] Aula 1 - Criamos a primeira parte do aplicativo, onde usamos ReactJS, NextJS e componentes estilizados. Aprendemos como usar NextJS com ReactJS e como criar nossos próprios componentes, compartilhando as responsabilidades do aplicativo para a criação de SPAs e como componentizar estilos usando componentes estilizados.
 
