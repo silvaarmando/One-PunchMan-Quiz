@@ -1,7 +1,8 @@
 <h1 align="center"> 
-  <img src="logoOnePunch.png"/>
-  <a href="https://one-punch-man-quiz.franciscoarmando63.vercel.app/">One-Punch Man Quiz</a>
-</h2>
+  <a href="https://one-punch-man-quiz.franciscoarmando63.vercel.app/">
+    <img src="logoOnePunch.png"/>
+  </h1>
+</center>
 <h2 align="center"> Aplicação Criada na Imersão React com NextJS e Styled Components da Alura.</h2>
 
 - [x] Aula 1 - Criamos a primeira parte do aplicativo, onde usamos ReactJS, NextJS e componentes estilizados. Aprendemos como usar NextJS com ReactJS e como criar nossos próprios componentes, compartilhando as responsabilidades do aplicativo para a criação de SPAs e como componentizar estilos usando componentes estilizados.
