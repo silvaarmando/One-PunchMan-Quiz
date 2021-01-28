@@ -1,5 +1,5 @@
 <h1 align="center"> 
-  <img src="logoAlura.png"/>
+  <img src="logoOnePunch.png"/>
   <a href="https://one-punch-man-quiz.franciscoarmando63.vercel.app/">One-Punch Man Quiz</a>
 </h2>
 <h2 align="center"> Aplicação Criada na Imersão React com NextJS e Styled Components da Alura.</h2>
