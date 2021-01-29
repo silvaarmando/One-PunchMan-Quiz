@@ -22,7 +22,12 @@ function LoadingWidget() {
   );
 }
 
-function QuestionWidget({ question, totalQuestions, questionIndex }) {
+function QuestionWidget({
+  question,
+  totalQuestions,
+  questionIndex,
+}) {
+  const questionId = `question__${questionIndex}`;
   return (
     <Widget>
       <Widget.Header>
@@ -49,15 +54,47 @@ function QuestionWidget({ question, totalQuestions, questionIndex }) {
           {question.description}
         </p>
 
-        <Button type="submit">
-          Confirmar
-        </Button>
+        <form>
+          {question.alternatives.map((alternative, alternativeIndex) => {
+            const alternativeId = `alternative__${alternativeIndex}`;
+            return (
+              <Widget.Topic
+                as="label"
+                htmlFor={alternativeId}
+              >
+                {alternative}
+                <input
+                  id={alternativeId}
+                  // style={{ display: 'none' }}
+                  name={questionId}
+                  type="radio"
+                />
+                {alternative}
+              </Widget.Topic>
+            );
+          })}
+
+          {/* <pre>
+            {JSON.stringfy(question, null, 4)}
+          </pre> */}
+
+          <Button type="submit">
+            Confirmar
+          </Button>
+        </form>
       </Widget.Content>
     </Widget>
   );
 }
 
-export default function QuizPage() {
+const screenStates = {
+  QUIZ: 'QUIZ',
+  LOADING: 'LOADING',
+  RESULT: 'RESULT',
+};
+
+function QuizPage() {
+  const screenState = screenStates.QUIZ;
   const totalQuestions = db.questions.length;
   const questionIndex = 0;
   const question = db.questions[0];
@@ -67,13 +104,21 @@ export default function QuizPage() {
       <QuizContainer>
         <QuizLogo />
 
-        <QuestionWidget
-          question={question}
-          questionIndex={questionIndex}
-          totalQuestions={totalQuestions}
-        />
+        {screenState === screenStates.QUIZ && (
+          <QuestionWidget
+            question={question}
+            questionIndex={questionIndex}
+            totalQuestions={totalQuestions}
+          />
+        )}
+
+        {screenState === screenStates.LOADING && <LoadingWidget />}
+
+        {screenState === screenStates.RESULT && <div>Você acertou x questões, parabéns</div>}
         <LoadingWidget />
       </QuizContainer>
     </QuizBackground>
   );
 }
+
+export default QuizPage;
