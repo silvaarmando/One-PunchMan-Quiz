@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
@@ -9,6 +8,7 @@ import QuizLogo from '../src/components/QuizLogo';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
+import QuizContainer from '../src/components/QuizContainer';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
 
@@ -19,21 +19,9 @@ import Button from '../src/components/Button';
 //  background-position: center;
 // `;
 
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-  @media Screen and (max-width: 500px) {
-    margin: auto;
-    padding: 15px;
-  }
-`;
-
 export default function Home() {
   const router = useRouter();
   const [name, setName] = React.useState('');
-  console.log('retorno do useState', name, setName);
 
   return (
     <QuizBackground backgroundImage={db.bg}>
@@ -61,10 +49,9 @@ export default function Home() {
             <h1>ONE-PUNCH MAN</h1>
           </Widget.Header>
           <Widget.Content>
-            <form onSubmit={ function (infosDoEvento) {
+            <form onSubmit={(infosDoEvento) => {
               infosDoEvento.preventDefault();
               router.push(`/quiz?name=${name}`);
-              console.log('Fazendo uma submissão por meio do React');
             }}
             >
               <Input
@@ -74,7 +61,7 @@ export default function Home() {
                 value={name}
               />
               <Button type="submit" disabled={name.length === 0}>
-                {`Joga ${name}`}
+                {`Jogar ${name}`}
               </Button>
             </form>
           </Widget.Content>
