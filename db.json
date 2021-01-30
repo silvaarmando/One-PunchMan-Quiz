@@ -4,25 +4,123 @@
     "description": "Teste os seus conhecimentos sobre o Anime One-Punch Man e vamos ver quantas questões você vai acertar.",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
+        "image": "https://dropandoideias.com/wp-content/uploads/2015/11/3-animes-da-temporada-de-outono-2015-one-punch-man-gif.gif",
+        "title": "Qual o nome do primeiro vilão que Saitama enfrentou depois que se tornou um herói profissional?",
         "description": "Essa é pra aquecer",
-        "answer": 2,
+        "answer": 0,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Sonic Velocidade da Luz",
+          "Boros",
+          "Cabeça de Martelo",
+          "Garou"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
+        "image": "https://thumbs.gfycat.com/WigglyDopeyLeopardseal-max-1mb.gif",
+        "title": "Com quantos anos Saitama começou a treinar para se tornar um herói",
+        "description": "essa você te mque lembrar...",
+        "answer": 2,
+        "alternatives": [
+          "25 anos",
+          "19 anos",
+          "22 anos",
+          "15 anos"
+        ]
+      },
+      {
+        "image": "https://pa1.narvii.com/6302/6008e73785e8dfe55bed97e57ee7ddf37c357261_00.gif",
+        "title": "Quem é o discipulo do Mestre Saitama?",
+        "description": "Sensei Senhor!",
+        "answer": 3,
+        "alternatives": [
+          "Bang",
+          "Tsuchibaki",
+          "King",
+          "Genos"
+        ]
+      },
+      {
+        "image": "https://64.media.tumblr.com/7f2a5a218f9c58281190fe3d1795a033/f111d2d4940e3b8e-74/s400x600/4b5d9b032dc9c90bcf63ada01677260f75836e64.gifv",
+        "title": "Quem é o héroi Classe S rank 3? ",
+        "description": "esse você tem que lembrar...",
         "answer": 0,
         "alternatives": [
-           "background: linear-gradient(#ffc400, #C92323);",
-           "background: gradient(#ffc400, #C92323);"
+          "Flash",
+          "Silver Bang",
+          "Blast",
+          "Amai Mask"
+        ]
+      },
+      {
+        "image": "https://pa1.narvii.com/6620/2606732401620d90d89d6bd4e1545c6ab0a596df_00.gif",
+        "title": "Quem é o héroi Classe A Rank 1?",
+        "description": "esse você tem que lembrar...",
+        "answer": 1,
+        "alternatives": [
+          "Taco de Metal",
+          "Amai Mask",
+          "Pretty Pretty Prisioner",
+          "Lightning Max"
+        ]
+      },
+      {
+        "image": "https://i.pinimg.com/originals/e7/61/01/e761012c3cb38ab4937bb2512ffb06df.gif",
+        "title": "Em que classe Genos e Saitama ficaram quando se tornaram heróis? ",
+        "description": "esse você tem que lembrar...",
+        "answer": 1,
+        "alternatives": [
+          "Classe S e Classe A",
+          "Classe C e Classe S",
+          "Classe A",
+          "Classe B"
+        ]
+      },
+      {
+        "image": "https://pa1.narvii.com/5890/f32adf147a5b3be52c1219116da1749dc4cf678b_hq.gif",
+        "title": "Quem é o herói mais forte da casa da evolução?",
+        "description": "esse você tem que lembrar...",
+        "answer": 0,
+        "alternatives": [
+          "Asura Kabuto",
+          "Saitama",
+          "Genos",
+          "Lion King"
+        ]
+      },
+      {
+        "image": "https://pa1.narvii.com/7236/9261ba09f885a1ee2da99139b14a6a65e0530dd9r1-540-304_hq.gif",
+        "title": "Com quantos anos Genos foi transformado em ciborgue?",
+        "description": "esse você tem que lembrar...",
+        "answer": 3,
+        "alternatives": [
+          "16 anos",
+          "13 anos",
+          "18 anos",
+          "15 anos"
+        ]
+      },
+      {
+        "image": "https://i.imgur.com/GN0jQ3M.gif",
+        "title": "Qual o super poder do Ciborgue Genos?",
+        "description": "esse você tem que lembrar...",
+        "answer": 0,
+        "alternatives": [
+          "Ensineração",
+          "Super Força",
+          "Super Velocidade",
+          "Telepatia"
+        ]
+      },
+      {
+        "image": "https://pa1.narvii.com/6808/1f4e7e680c043f0842fbd0c6f59d1584430b8787_hq.gif",
+        "title": "Como Saitama costuma derrotar os vilões?",
+        "description": "esse você tem que lembrar...",
+        "answer": 3,
+        "alternatives": [
+          "Com um soco",
+          "Com poderes telecinéticos",
+          "Com sua super velocidade",
+          "Com encineração"
         ]
       }
     ],
