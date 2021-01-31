@@ -9,7 +9,7 @@
 
 - [x] Aula 2 - Utilizamos o google fonts para nossa fonte, adição de Title e Logo, utilizamos o ESLint para padronização de código, e começamos a utilizar o  Router para fazer transições de rota entre páginas como em um aplicativo de página única, e useState do React para mudanças de estado entre componentes na aplicação.
 
-- [ ] Aula 3
+- [ ] Aula 3 - Criamos o componente *Input* e adicionamos novos componentes e começamos a trabalhar o gerenciamento de states e adicionamos a lib prop-types para lidar com os tipos. Criamos nosso formulário e trabalhamos em cima de alguns Hooks do React como o useEffect para adicionar funcionalidades aos componentes do Quiz.  
 
 - [ ] Aula 4
 
