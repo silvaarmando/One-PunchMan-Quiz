@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { interopDefault } from 'next/dist/next-server/server/load-components';
 import React from 'react';
 
 import db from '../db.json';
@@ -28,7 +29,9 @@ function QuestionWidget({
   questionIndex,
   onSubmit,
 }) {
+  const [selectedAlternative, setSelectedAlternative] = React.useState(undefined);
   const questionId = `question__${questionIndex}`;
+  const isCorrect = selectedAlternative === question.answer;
   return (
     <Widget>
       <Widget.Header>
@@ -66,13 +69,15 @@ function QuestionWidget({
             return (
               <Widget.Topic
                 as="label"
+                key={alternativeId}
                 htmlFor={alternativeId}
               >
                 {alternative}
-                <input
+                <interopDefault
                   id={alternativeId}
                   // style={{ display: 'none' }}
                   name={questionId}
+                  onChange={() => setSelectedAlternative(alternativeIndex)}
                   type="radio"
                 />
                 {alternative}
@@ -87,6 +92,8 @@ function QuestionWidget({
           <Button type="submit">
             Confirmar
           </Button>
+          {isCorrect && <p>Você acertou!</p>}
+          {isCorrect && <p>Você errou!</p>}
         </form>
       </Widget.Content>
     </Widget>
@@ -106,7 +113,7 @@ export default function QuizPage() {
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const questionIndex = currentQuestion;
 
-  const question = db.questions[0];
+  const question = db.questions[questionIndex];
 
   React.useEffect(() => {
     setTimeout(() => {
