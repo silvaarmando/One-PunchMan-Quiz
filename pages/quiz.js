@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import { interopDefault } from 'next/dist/next-server/server/load-components';
 import React from 'react';
 
 import db from '../db.json';
@@ -30,8 +29,11 @@ function QuestionWidget({
   onSubmit,
 }) {
   const [selectedAlternative, setSelectedAlternative] = React.useState(undefined);
+  const [isQuestionSubmited, setIsQuestionSubmited] = React.useState(false);
   const questionId = `question__${questionIndex}`;
   const isCorrect = selectedAlternative === question.answer;
+  const hasAlternativeSelected = selectedAlternative !== undefined;
+
   return (
     <Widget>
       <Widget.Header>
@@ -61,7 +63,12 @@ function QuestionWidget({
         <form
           onSubmit={(infosDoEvento) => {
             infosDoEvento.preventDefault();
-            onSubmit();
+            setIsQuestionSubmited(true);
+            setTimeout(() => {
+              onSubmit();
+              setIsQuestionSubmited(false);
+              setSelectedAlternative(undefined);
+            }, 3 * 1000);
           }}
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
@@ -72,8 +79,7 @@ function QuestionWidget({
                 key={alternativeId}
                 htmlFor={alternativeId}
               >
-                {alternative}
-                <interopDefault
+                <input
                   id={alternativeId}
                   // style={{ display: 'none' }}
                   name={questionId}
@@ -89,11 +95,11 @@ function QuestionWidget({
             {JSON.stringfy(question, null, 4)}
           </pre> */}
 
-          <Button type="submit">
+          <Button type="submit" disabled={!hasAlternativeSelected}>
             Confirmar
           </Button>
-          {isCorrect && <p>Você acertou!</p>}
-          {isCorrect && <p>Você errou!</p>}
+          {isQuestionSubmited && isCorrect && <p>Você acertou!</p>}
+          {isQuestionSubmited && !isCorrect && <p>Você errou!</p>}
         </form>
       </Widget.Content>
     </Widget>
@@ -144,7 +150,6 @@ export default function QuizPage() {
           />
         )}
 
-        {screenState === screenStates.LOADING && <LoadingWidget />}
 
         {screenState === screenStates.RESULT && <div>Você acertou x questões, parabéns</div>}
         <LoadingWidget />
